@@ -81,9 +81,10 @@ S, E, I, R = ret.T
 total_exposed = E+I
 
 # print some summary information
-print("Total who got the virus: {:.0f}".format(R[-1]))
-print("Total who never got the virus: {:.0f}".format(S[-1]))
-print("Peak number of simultaneously contageous people: {:.0f}".format(np.max(total_exposed)))
+print("Total who got the virus: {:,.0f}".format(R[-1]))
+print("Total who never got the virus: {:,.0f}".format(S[-1]))
+print("Peak number of simultaneously contageous people: {:,.0f}".format(np.max(total_exposed)))
+print("Peak number of simultaneously symptomatic people (i.e. peak number requiring hospitalization): {:,.0f}".format(np.max(I)))
 
 # plotting functions
 fig = plt.figure(facecolor='w')
